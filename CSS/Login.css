@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    width: 100vw;
+    background: url('../Files/Login/Rectangle\ 20.png') no-repeat center center / cover;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+}
+
+header img {
+    max-width: 30%;
+    height: auto;
+    z-index: 3;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 2vh;
+    color: #616161;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    margin-left: 10vw; /* Altere o valor conforme necessário para ajustar a posição */
+
+}
+
+.background {
+    width: 70vw;
+    height: 100vh;
+    background-image: url('../Files/Login/Wallpaper_.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    order: 1;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+section h1{
+    font-family: Open Sans;
+    margin-left: 20vh;
+    font-size: 4vh;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 9999;
+}
+
+form label {
+    font-size: 2vh;
+    font-family: Open Sans;
+}
+
+.text_login {
+    margin-top: 4vh;
+}
+
+.text_login input[type="email"], 
+.text_login input[type="password"] {
+    width: 80%;
+    height: 3vh;
+    border: 1px solid lightgrey;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    z-index: 10000;
+}
+
+.text_login input[type="submit"] {
+    font-size: 2vh;
+    width: 80%;
+    height: 4vh;
+    border: 1px solid green;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    z-index: 10000;
+    background-color: darkgreen;
+    color: white;
+}
+
+.text_login a {
+    color: darkgreen;
+}
