@@ -6,35 +6,35 @@ body {
 }
 
 header {
-    position: absolute;
+    position: absolute; /* Mantém o header fixo no topo */
     width: 100vw;
     background: url('../Files/Login/Rectangle\ 20.png') no-repeat center center / cover;
     height: 20vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 2;
+    z-index: 10; /* Aumenta o z-index para garantir que fique na frente */
 }
 
 header img {
     max-width: 30%;
     height: auto;
-    z-index: 3;
-    margin-right: 20px;
+    margin-right: 3vw;
+    margin-left: 3vw;
 }
 
-nav {
+.menu nav {
     display: flex;
     align-items: center;
 }
 
-nav ul {
+.menu nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li a {
+.menu nav ul li a {
     font-family: Open Sans;
     text-decoration: none;
     font-size: 2vh;
@@ -51,9 +51,8 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 5;
-    margin-left: 10vw; /* Altere o valor conforme necessário para ajustar a posição */
-
+    z-index: 5; /* O z-index está bem aqui para a estrutura */
+    margin-left: 10vw; /* Ajusta a posição */
 }
 
 .background {
@@ -64,13 +63,13 @@ nav ul li a {
     background-position: bottom;
     background-repeat: no-repeat;
     order: 1;
-    z-index: 1;
-    position: absolute;
+    z-index: 1; /* Mantém o z-index menor que o header */
+    position: absolute; /* Mantém a div de fundo na posição correta */
     top: 0;
     right: 0;
 }
 
-section h1{
+#form1 h1 {
     font-family: Open Sans;
     margin-left: 20vh;
     font-size: 4vh;
@@ -92,32 +91,106 @@ form label {
     margin-top: 4vh;
 }
 
-.text_login input[type="email"], 
+.text_login input[type="email"],
+.text_login input[type="text"],
 .text_login input[type="password"] {
-    width: 80%;
-    height: 3vh;
+    width: 100%;
+    min-height: 3.3vh;
     border: 1px solid lightgrey;
     padding: 5px;
     box-sizing: border-box;
     border-radius: 4px;
     outline: none;
-    z-index: 10000;
 }
 
 .text_login input[type="submit"] {
     font-size: 2vh;
-    width: 80%;
-    height: 4vh;
+    min-width: 80%;
+    min-height: 4vh;
     border: 1px solid green;
     padding: 5px;
     box-sizing: border-box;
     border-radius: 10px;
     outline: none;
-    z-index: 10000;
     background-color: darkgreen;
     color: white;
 }
 
 .text_login a {
     color: darkgreen;
+}
+
+/*CADASTRO*/
+.termo_uso {
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+#form2 h1 {
+    font-family: Open Sans;
+    margin-left: 20vh;
+    font-size: 4vh;
+}
+
+/*ASSINATURA*/
+
+#form3 {
+    max-width: 40vw;
+}
+
+#form3 h1 {
+    font-family: Open Sans;
+    font-size: 4vh;
+}
+
+#form3 form {
+    max-width: 20vw;
+    border: 1px solid lightgreen;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
+}
+
+.assinatura_page h1 {
+    text-align: left;
+}
+
+.assinatura_form {
+    min-width: 10vw;
+    font-family: Open Sans;
+}
+
+.assinatura_form h3,
+.assinatura_form h2,
+.assinatura_form h4 {
+    font-family: Open Sans;
+}
+
+.assinatura_form h4 {
+    color: silver;
+}
+
+.assinatura_form nav {
+    text-align: left; /* Alinha o conteúdo do nav à esquerda */
+}
+
+.assinatura_form nav ul {
+    list-style-type: disc; /* Exibe os marcadores como bolinhas */
+    padding-left: 20px; /* Adiciona um padding à esquerda para os marcadores */
+    margin: 0; /* Remove a margem padrão do ul */
+}
+
+.assinatura_form nav ul li {
+    display: list-item; /* Faz com que cada item da lista exiba os marcadores */
+    margin-bottom: 5px; /* Adiciona um espaço entre os itens */
+}
+
+.assinatura_form nav ul li a {
+    font-family: Open Sans;
+    font-size: 2vh;
+    color: #616161;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
