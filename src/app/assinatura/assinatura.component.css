@@ -8,7 +8,7 @@ body {
 header {
     position: absolute; /* Mantém o header fixo no topo */
     width: 100vw;
-    background: url('../Files/Login/Rectangle\ 20.png') no-repeat center center / cover;
+    background: url('../../assets/files/Rectangle\ 20.png') no-repeat center center / cover;
     height: 20vh;
     display: flex;
     justify-content: flex-start;
@@ -58,7 +58,7 @@ header img {
 .background {
     width: 70vw;
     height: 100vh;
-    background-image: url('../Files/Login/Wallpaper_.png');
+    background-image: url('../../assets/files/Wallpaper_.png');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
