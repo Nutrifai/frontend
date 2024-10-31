@@ -1,0 +1,680 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+    z-index: 100;
+}
+
+.nav-logo img {
+    margin-top: 20%;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+.link:hover,
+.active {
+    border-bottom: 2px solid #fff;
+}
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#registerBtn {
+    margin-left: 15px;
+}
+
+.btn.white-btn {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.white-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-menu-btn i {
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .nav-menu-btn i:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.healthyLifeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centraliza verticalmente */
+    width: 93.5rem;
+    height: 33.4rem;
+    padding: 2rem;
+    /* Ajuste o espaçamento conforme necessário */
+    top: 10rem;
+    position: relative;
+}
+
+.initialDiv {
+    width: 25.2rem;
+    height: 14.8rem;
+}
+
+.btnCadastrar {
+    width: 20rem;
+    background-color: #387c4c;
+    border-color: #387c4c;
+}
+
+.btnCadastrar:hover {
+    background-color: #174625;
+}
+
+.textoCadastro {
+    width: 18rem;
+    font-size: small;
+}
+
+.imgCadastro {
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    margin-left: auto;
+    /* Garante que a imagem vá para o lado direito */
+}
+
+.hero_area {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.hero_area .hero_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero_area .hero_bg_box .bg_img_box {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hero_area .hero_bg_box img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.about_section .heading_container {
+    margin-bottom: 45px;
+}
+
+.about_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.about_section .img-box img {
+    max-width: 100%;
+}
+
+.simboloLista {
+    width: 2rem;
+}
+
+.item-lista {
+    margin-bottom: 2rem;
+    font-size: large;
+    list-style: none;
+}
+
+.lista-saudavel {
+    margin-top: 9rem;
+}
+
+.txt-saudavel {
+    font-size: 10rem;
+}
+
+.txt-vida {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+.conteudo-saudavel {
+    margin-top: -10rem;
+}
+
+.recursos_section {
+    background-color: #e0f4e4;
+    width: 75rem;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 3rem 0rem 0rem 3rem;
+    height: 11.5rem;
+}
+
+.recursos_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.linhas-recursos {
+    margin-left: 6rem;
+    margin-top: -2.6rem;
+}
+
+.heading_container.heading_center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloRecursos {
+    top: 1.25rem;
+    position: relative;
+    font-size: xx-large;
+}
+
+.txtRecursos {
+    top: 0.75rem;
+    position: relative;
+    color: #616161;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+.team_section {
+    text-align: center;
+    color: black;
+}
+
+.team_section .heading_container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.team_section .team_container {
+    padding: 0 15px;
+}
+
+
+.team_section .team_container .box {
+    padding: 35px 0 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team_section .team_container .box .img-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+.team_section .team_container .box .detail-box {
+    margin: 25px 0;
+
+}
+
+.team_section .team_container .box .detail-box h5 {
+    color: black;
+    font-weight: 600;
+    position: relative;
+}
+
+.team_section .team_container .box .detail-box {
+    flex: 2;
+    /* Define largura do texto */
+    text-align: left;
+    /* Alinha o texto à direita */
+    margin-left: 20px;
+    /* Espaçamento entre a imagem e o texto */
+}
+
+.texto-rotina {
+    font-size: medium;
+}
+
+.titulo-rotina {
+    font-size: x-large;
+}
+
+.cadastro_section {
+    background-color: #e0f4e4;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 auto;
+    /* Garante que a section fique no centro da página */
+    padding: 2rem 0;
+    /* Espaçamento superior e inferior */
+    width: 45rem;
+    /* Definir uma largura máxima para evitar que a section se estenda demais */
+    border-radius: 3rem;
+}
+
+.titulocadastro {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+.btnCadastrarAdd {
+    width: 15rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    background-color: #387c4c;
+    border-color: #387c4c;
+    border-radius: 2rem;
+}
+
+.btnCadastrarAdd:hover {
+    background-color: #174625;
+}
+
+.imgInterrogacao {
+    width: 6rem;
+    height: auto;
+    margin-right: 3rem;
+    /* Mantém a proporção da imagem */
+}
+
+.what_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.what_section {
+    padding: 3rem 0;
+    /* Adiciona um espaçamento vertical */
+    position: relative;
+    /* Garante que a section tenha uma posição definida */
+}
+
+.what_section .conteudo-saudavel {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Garante que o texto e a imagem fiquem bem distribuídos */
+    margin-top: 3rem;
+    /* Ajuste de margem superior para evitar sobreposição */
+}
+
+.what_section .img-box img {
+    max-width: 100%;
+    /* Garante que a imagem ocupe o máximo de espaço possível sem perder proporção */
+    height: auto;
+}
+
+.what_section .detail-box {
+    padding: 1rem;
+    /* Adiciona espaçamento interno ao box de detalhes */
+}
+
+.what_section .lista-saudavel {
+    margin-top: 1rem;
+    /* Ajusta o espaçamento entre o título e a lista */
+}
+
+.what_section h2 {
+    font-size: 2.5rem;
+    /* Define um tamanho consistente para os títulos */
+}
+
+.what_section ul {
+    padding-left: 0;
+}
+
+.what_section li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    /* Ajusta o tamanho do texto para melhor legibilidade */
+    margin-bottom: 1rem;
+}
+
+.what_section .simboloLista {
+    width: 1.5rem;
+    /* Ajusta o tamanho dos ícones da lista */
+    margin-right: 1rem;
+    /* Adiciona espaçamento entre o ícone e o texto */
+}
+
+
+.simboloLista {
+    width: 2rem;
+}
+
+.item-lista {
+    margin-bottom: 2rem;
+    font-size: large;
+    list-style: none;
+}
+
+.lista-saudavel {
+    margin-top: 9rem;
+}
+
+.txt-saudavel {
+    font-size: 10rem;
+}
+
+.txt-vida {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+.conteudo-saudavel {
+    margin-top: -10rem;
+}
+
+
+.nutricionista_area .nutricionista_bg_box .bg_img_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-nutri {
+    width: 25rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.nutri_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nutri_section .img-box img {
+    max-width: 100%;
+    /* Garante que a imagem ocupe o máximo de espaço possível sem perder proporção */
+    height: auto;
+}
+
+.nutri_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Mantenha a altura automática para ajustar conforme o conteúdo */
+}
+
+.nutricionista_area {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Garante que o conteúdo não exceda a área da seção */
+    height: 89vh;
+    /* Ajuste o valor para a altura desejada */
+}
+
+.nutricionista_area .nutricionista_bg_box img {
+    width: 100%;
+    /* Para ocupar a largura total da seção */
+    height: 100%;
+    /* Para garantir que a altura da imagem preencha a seção */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir toda a área do container */
+}
+
+.nutricionista_area .nutricionista_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mantém a altura da imagem igual à altura da seção */
+    overflow: hidden;
+    /* Impede que o conteúdo exceda a seção */
+}
+
+.nutri_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nutricionista_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-nutri {
+    max-width: 100%;
+    /* Ajusta a imagem para que não exceda o tamanho do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.texto-nutri {
+    width: 35rem;
+    padding: 0 0 2rem;
+}
+
+.service_section {
+    position: relative;
+}
+
+.service_section .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.service_section .btn-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    background-color: #387c4c;
+    border-color: #387c4c;
+    border-radius: 2rem;
+    text-decoration: none
+}
+
+.service_section .btn-box a:hover {
+    background-color: #174625;
+}
+
+.info_section {
+    background-color: #e0f4e4;
+    padding: 45px 0 15px 0;
+}
+
+.info_section h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info_section .info_col {
+    margin-bottom: 30px;
+}
+
+.info_section .info_contact .contact_link_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.item-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.item-lista-invista {
+    font-size: large;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.invista-itens {
+    top: 3rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.txt-invista {
+    width: 50%;
+    display: -webkit-inline-box;
+}
+
+.texto-verde-escuro {
+    color: #387c4c;
+}
