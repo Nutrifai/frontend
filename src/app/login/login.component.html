@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="login.component.css" media="screen" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header class="menu">
+        <img src="Features.png" alt="Features">
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Sobre Nós</a></li>
+                <li><a href="#contact">Recursos</a></li>
+                <li><a href="../assinatura/assinatura.component.html" id="assinatura">Assinatura</a></li>
+            </ul>
+        </nav>
+    </header>    
+    
+    <div class="background"></div>
+    
+    <main class="content">
+        <!-- Formulário 1 (Login) -->
+        <section id="form1">
+            <h1>Entrar</h1>
+            <form>
+                <div class="text_login">
+                    <label>Email</label><br>
+                    <input type="email" placeholder="abc@gmail.com">
+                </div>
+
+                <div class="text_login">
+                    <label>Senha</label><br>
+                    <input type="password" placeholder="...........">
+                    <br><a href="#">Esqueceu sua senha?</a>
+                </div>
+
+                <div class="text_login">
+                    <input type="submit" value="Concluído">
+                </div>
+            </form>
+
+            <div class="text_login">
+                <label>Não tem uma conta? </label><a href="#" id="cadastro">Cadastre-se</a>
+            </div>
+        </section>
+
+        <!-- Espaço para o segundo formulário (cadastro) -->
+        <section id="form2" style="display: none;">
+            <!-- O conteúdo será carregado dinamicamente -->
+        </section>
+        
+        <!-- Espaço para o terceiro formulário (assinatura) -->
+        <section id="form3" style="display: none;">
+            <!-- O conteúdo será carregado dinamicamente -->
+        </section>
+    </main>
+
+    <!-- Referência ao arquivo JavaScript externo -->
+    <script src="../JavaScript/Script.js"></script>
+  </body>
+</html>
