@@ -53,6 +53,7 @@ header img {
     position: relative;
     z-index: 5; /* O z-index está bem aqui para a estrutura */
     margin-left: 10vw; /* Ajusta a posição */
+    margin-top: 10vw;
 }
 
 .background {

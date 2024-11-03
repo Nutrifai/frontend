@@ -53,6 +53,7 @@ header img {
     position: relative;
     z-index: 5; /* O z-index está bem aqui para a estrutura */
     margin-left: 10vw; /* Ajusta a posição */
+    margin-top: 8vw;
 }
 
 .background {
@@ -126,10 +127,19 @@ form label {
     text-align: center;
 }
 
+#form2 {
+    border: 1px solid lightgreen;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
+}
 #form2 h1 {
     font-family: Open Sans;
-    margin-left: 20vh;
+    text-align: center;
     font-size: 4vh;
+}
+#form2 input[type="submit"]{
+    margin-left: 5vh;
 }
 
 /*ASSINATURA*/

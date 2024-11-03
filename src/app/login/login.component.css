@@ -72,8 +72,16 @@ header img {
 
 #form1 h1 {
     font-family: Open Sans;
-    margin-left: 20vh;
     font-size: 4vh;
+    text-align: center;
+}
+
+#form1 {
+    min-width: 30vw;
+    border: 1px solid lightgreen;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
 }
 
 form {
@@ -115,6 +123,7 @@ form label {
     outline: none;
     background-color: darkgreen;
     color: white;
+    margin-left: 3vw;
 }
 
 .text_login a {
