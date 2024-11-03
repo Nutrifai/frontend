@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+/*
+HEADER NAV
+*/
+header {
+    position: absolute; /* Mantém o header fixo no topo */
+    width: 100vw;
+    background: url('../../../public/Rectangle\ 20.png') no-repeat center center / cover;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10; /* Aumenta o z-index para garantir que fique na frente */
+}
+
+header img {
+    max-width: 30%;
+    height: auto;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+.menu nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu nav ul li a {
+    font-family: Open Sans;
+    text-decoration: none;
+    font-size: 2vh;
+    color: #616161;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/*
+HEADER MENU NAV FIM
+*/
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5; /* O z-index está bem aqui para a estrutura */
+    margin-left: 10vw; /* Ajusta a posição */
+    margin-top: 10vw;
+}
+
+.content h1 {
+    font-family: Open Sans;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.content h3 {
+    font-family: Open Sans;
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+}
+
+.conteudo_comida h1,h2,ul,li {
+    font-family: Open Sans;
+}
+
+main{
+    width: 80vw;
+}
+
+#infos{
+    margin-left: 8vw;
+    border: 1px solid lightgreen;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
+    background-color: white;
+    width: 60vw;
+}
+
+
+
+.details{
+    font-size: 1rem;
+    margin-top: 2vw;
+}
