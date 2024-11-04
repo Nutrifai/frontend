@@ -1,3 +1,9 @@
+/* Estilo geral da fonte */
+* {
+    font-family: Open Sans, sans-serif; /* Adicionei fallback */
+}
+
+/* Corpo da página */
 body {
     margin: 0;
     display: flex;
@@ -5,24 +11,25 @@ body {
     position: relative;
 }
 
+/* Estilo do cabeçalho */
 header {
-    position: absolute; /* Mantém o header fixo no topo */
+    position: absolute;
     width: 100vw;
-    background: url('../../../public/Rectangle\ 20.png') no-repeat center center / cover;
+    background: url('../../../public/Rectangle 20.png') no-repeat center center / cover;
     height: 20vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 10; /* Aumenta o z-index para garantir que fique na frente */
+    z-index: 10;
 }
 
 header img {
     max-width: 30%;
     height: auto;
-    margin-right: 3vw;
-    margin-left: 3vw;
+    margin: 0 3vw;
 }
 
+/* Estilo de navegação */
 .menu nav {
     display: flex;
     align-items: center;
@@ -35,7 +42,6 @@ header img {
 }
 
 .menu nav ul li a {
-    font-family: Open Sans;
     text-decoration: none;
     font-size: 2vh;
     color: #616161;
@@ -44,6 +50,7 @@ header img {
     transition: background-color 0.3s ease;
 }
 
+/* Estilo principal do conteúdo */
 .content {
     flex: 1;
     padding: 20px;
@@ -51,11 +58,12 @@ header img {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 5; /* O z-index está bem aqui para a estrutura */
-    margin-left: 10vw; /* Ajusta a posição */
+    z-index: 5;
+    margin-left: 10vw;
     margin-top: 10vw;
 }
 
+/* Estilo da imagem de fundo */
 .background {
     width: 70vw;
     height: 100vh;
@@ -63,19 +71,13 @@ header img {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    order: 1;
-    z-index: 1; /* Mantém o z-index menor que o header */
-    position: absolute; /* Mantém a div de fundo na posição correta */
+    position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
-#form1 h1 {
-    font-family: Open Sans;
-    margin-left: 20vh;
-    font-size: 4vh;
-}
-
+/* Estilo do formulário */
 form {
     width: 100%;
     max-width: 500px;
@@ -85,113 +87,65 @@ form {
 
 form label {
     font-size: 2vh;
-    font-family: Open Sans;
 }
 
-.text_login {
+/* Estilo das seções de assinatura */
+.text_assinatura {
     margin-top: 4vh;
 }
 
-.text_login input[type="email"],
-.text_login input[type="text"],
-.text_login input[type="password"] {
-    width: 100%;
-    min-height: 3.3vh;
-    border: 1px solid lightgrey;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    outline: none;
-}
-
-.text_login input[type="submit"] {
+.text_assinatura input[type="submit"] {
     font-size: 2vh;
     min-width: 80%;
     min-height: 4vh;
     border: 1px solid green;
     padding: 5px;
-    box-sizing: border-box;
     border-radius: 10px;
-    outline: none;
     background-color: darkgreen;
     color: white;
+    outline: none;
 }
 
-.text_login a {
+.text_assinatura a {
     color: darkgreen;
 }
 
-/*CADASTRO*/
-.termo_uso {
-    font-size: 1.5vh;
-    text-align: center;
-}
-
-#form2 h1 {
-    font-family: Open Sans;
-    margin-left: 20vh;
-    font-size: 4vh;
-}
-
-/*ASSINATURA*/
-
-#form3 {
+/* Estilização do formulário de assinatura */
+#assinature {
     max-width: 40vw;
 }
 
-#form3 h1 {
-    font-family: Open Sans;
+#assinature h1 {
     font-size: 4vh;
 }
 
-#form3 form {
+#assinature form {
     max-width: 20vw;
     border: 1px solid lightgreen;
     text-align: center;
     padding: 1rem;
     border-radius: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.assinatura_page h1 {
-    text-align: left;
-}
-
-.assinatura_form {
-    min-width: 10vw;
-    font-family: Open Sans;
-}
-
-.assinatura_form h3,
-.assinatura_form h2,
-.assinatura_form h4 {
-    font-family: Open Sans;
-}
-
+/* Estilo de títulos */
 .assinatura_form h4 {
     color: silver;
 }
 
+/* Estilo das listas */
 .assinatura_form nav {
-    text-align: left; /* Alinha o conteúdo do nav à esquerda */
+    text-align: left;
 }
 
 .assinatura_form nav ul {
-    list-style-type: disc; /* Exibe os marcadores como bolinhas */
-    padding-left: 20px; /* Adiciona um padding à esquerda para os marcadores */
-    margin: 0; /* Remove a margem padrão do ul */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
 }
 
 .assinatura_form nav ul li {
-    display: list-item; /* Faz com que cada item da lista exiba os marcadores */
-    margin-bottom: 5px; /* Adiciona um espaço entre os itens */
+    margin-bottom: 5px;
 }
 
-.assinatura_form nav ul li a {
-    font-family: Open Sans;
-    font-size: 2vh;
-    color: #616161;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+/* Removida a redundância do seletor para 'nav ul li a' */
