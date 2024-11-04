@@ -6,6 +6,7 @@ import { AssinaturaComponent } from './assinatura/assinatura.component';
 import { DietComponent } from './diet/diet.component';
 import { NutricionistaComponent } from './nutricionista/nutricionista.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { DietAiComponent } from './diet-ai/diet-ai.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -14,7 +15,8 @@ export const routes: Routes = [
     { path: 'nutricionista', component: NutricionistaComponent },
     { path: 'login', component: LoginComponent },
     { path: 'cadastro', component: CadastroComponent },
+    { path: 'dietai', component: DietAiComponent },
     { path: 'assinatura', component: AssinaturaComponent },
-    //{ path: '', redirectTo: '/nutricionista', pathMatch: 'full' }, // Redireciona para 'home' por padrão
+    { path: '', redirectTo: '/dietai', pathMatch: 'full' }, // Redireciona para 'home' por padrão
     //{ path: '**', redirectTo: '/home' } // Captura rotas inválidas
 ];
