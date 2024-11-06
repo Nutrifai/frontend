@@ -64,17 +64,18 @@ header img {
 }
 
 /* Estilo da imagem de fundo */
+/* Estilo do elemento de fundo */
 .background {
-    width: 70vw;
-    height: 100vh;
+    width: 70vw; /* Exibe apenas 70% da largura da tela */
+    height: 100vh; /* Ocupa 100% da altura da tela */
     background-image: url('../../../public/Wallpaper_.png');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed; /* Usa position fixed para fixar o fundo no lugar */
     top: 0;
-    right: 0;
-    z-index: 1;
+    left: 0; /* Posiciona a imagem à esquerda */
+    z-index: -1; /* Coloca a imagem abaixo de todo o conteúdo */
 }
 
 /* Estilo do formulário */

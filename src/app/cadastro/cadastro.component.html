@@ -1,79 +1,40 @@
-<!doctype html>
-<html>
-  <head>
-    <!-- Metadados básicos para SEO e responsividade -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Elemento de fundo para efeitos visuais -->
+<app-header-geral></app-header-geral>
+<section>
+  <div class="background"></div>
+    <form id="form_cadastro">
+      <h1 class="font-weight-bold">Cadastro</h1>
+      <!-- Campo de entrada para o nome -->
+      <div class="text_cadastro">
+        <label for="nome">Nome</label><br />
+        <input type="text" id="nome" placeholder="Seu nome" />
+      </div>
 
-    <!-- Importação de estilos externos -->
-    <link rel="stylesheet" type="text/css" href="cadastro.component.css" media="screen" />
+      <!-- Campo de entrada para o e-mail -->
+      <div class="text_cadastro">
+        <label for="email">Email</label><br />
+        <input type="email" id="email" placeholder="abc@gmail.com" />
+      </div>
 
-    <!-- Título da página -->
-    <title>Assinaturas</title>
-  </head>
-  <body>
-    <!-- Cabeçalho com navegação principal -->
-    <header class="menu">
-      <img src="Features.png" alt="Features" />
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Sobre Nós</a></li>
-          <li><a href="#contact">Recursos</a></li>
-          <li><a href="../assinatura/assinatura.component.html" id="assinatura">Assinatura</a></li>
-        </ul>
-      </nav>
-    </header>
+      <!-- Campo de entrada para a senha -->
+      <div class="text_cadastro">
+        <label for="senha">Senha</label><br />
+        <input type="password" id="senha" placeholder="*********" />
+      </div>
 
-    <!-- Elemento de fundo para efeitos visuais -->
-    <div class="background"></div>
+      <!-- Termos de uso -->
+      <div class="text_cadastro termo_uso">
+        <label>
+          Ao se inscrever, você concorda com a <a href="#">política de privacidade</a> e os <a href="#">Termos de
+            uso</a> da NutrifAI
+        </label>
+      </div>
 
-    <!-- Conteúdo principal com o formulário de cadastro -->
-    <main class="content">
-      <section id="form_cadastro">
-        <h1>Cadastro</h1>
-        <form>
-          <!-- Campo de entrada para o nome -->
-          <div class="text_cadastro">
-            <label for="nome">Nome</label><br />
-            <input type="text" id="nome" placeholder="Seu nome" />
-          </div>
+      <!-- Botão de submissão -->
+      <div class="text_cadastro div-btn">
+        <input class="btnRegistrar" type="submit" value="Registrar"/>
+      </div>
 
-          <!-- Campo de entrada para o e-mail -->
-          <div class="text_cadastro">
-            <label for="email">Email</label><br />
-            <input type="email" id="email" placeholder="abc@gmail.com" />
-          </div>
-
-          <!-- Campo de entrada para a senha -->
-          <div class="text_cadastro">
-            <label for="senha">Senha</label><br />
-            <input type="password" id="senha" placeholder="*********" />
-          </div>
-
-          <!-- Campo de entrada para confirmação de senha -->
-          <div class="text_cadastro">
-            <label for="confirmar_senha">Confirme a Senha</label><br />
-            <input type="password" id="confirmar_senha" placeholder="*********" />
-          </div>
-
-          <!-- Termos de uso -->
-          <div class="text_cadastro termo_uso">
-            <label>
-              Ao se inscrever, você concorda com a <a href="#">política de privacidade</a> e os <a href="#">Termos de uso</a> da NutrifAI
-            </label>
-          </div>
-
-          <!-- Botão de submissão -->
-          <div class="text_cadastro">
-            <input type="submit" value="Registrar" />
-          </div>
-        </form>
-
-        <!-- Link para o login -->
-        <div class="text_cadastro">
-          <label>Já tem uma conta? </label><a href="../login/login.component.html" id="login">Entrar</a>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+      <label class="conta">Já tem uma conta? <a class="text_login" href="/login" id="login">Entrar</a></label>
+    </form>
+</section>

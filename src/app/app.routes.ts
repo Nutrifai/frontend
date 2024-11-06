@@ -7,8 +7,10 @@ import { NutricionistaComponent } from './nutricionista/nutricionista.component'
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { DietAiComponent } from './diet-ai/diet-ai.component';
 import { AgendaNutricionistaComponent } from './agenda-nutricionista/agenda-nutricionista.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 export const routes: Routes = [
+    { path: 'inicio', component: InicioComponent },
     { path: 'diet', component: DietComponent },
     { path: 'forget_password', component: ForgetPasswordComponent },
     { path: 'nutricionista', component: NutricionistaComponent },
@@ -17,4 +19,5 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'dietai', component: DietAiComponent },
     { path: 'assinatura', component: AssinaturaComponent },
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' }, // Redireciona para 'home' por padrão
 ];
