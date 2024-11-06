@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Link para o arquivo de estilos externos -->
     <link rel="stylesheet" type="text/css" href="login.component.css" media="screen" />
     <title>Login</title>
   </head>
   <body>
+    <!-- Cabeçalho com logotipo e menu de navegação -->
     <header class="menu">
-        <img src="Features.png" alt="Features">
+        <img src="Features.png" alt="Features" />
         <nav>
             <ul>
                 <li><a href="" class="link active">Sobre Nós</a></li>
@@ -18,31 +20,36 @@
         </nav>
     </header>    
     
+    <!-- Div de fundo decorativa -->
     <div class="background"></div>
     
+    <!-- Conteúdo principal com formulário de login -->
     <main class="content">
-        <!-- Formulário 1 (Login) -->
         <section id="login">
             <h1>Entrar</h1>
             <form>
+                <!-- Campo de entrada de email -->
                 <div class="text_login">
-                    <label>Login</label><br>
-                    <input type="email" placeholder="abc@gmail.com">
-                </div>
-            
-                <div class="text_login">
-                    <label>Senha</label><br>
-                    <input type="password" placeholder="...........">
+                    <label for="email">Login</label><br>
+                    <input type="email" id="email" placeholder="abc@gmail.com">
                 </div>
                 
+                <!-- Campo de entrada de senha -->
+                <div class="text_login">
+                    <label for="password">Senha</label><br>
+                    <input type="password" id="password" placeholder="...........">
+                </div>
+                
+                <!-- Link para recuperação de senha -->
                 <div class="text_login">
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
-            
+                
+                <!-- Botão de envio do formulário -->
                 <div class="text_login_submit">
                     <input type="submit" value="Concluído">
                 </div>
-            </form>            
+            </form>
         </section>
     </main>
   </body>
