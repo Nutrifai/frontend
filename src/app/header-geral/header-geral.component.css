@@ -15,7 +15,7 @@
   header {
     position: absolute;
     width: 100vw;
-    background: url('../../../public/Rectangle 20.png') no-repeat center / cover;
+    background: url('../../../public/Rectangle20.png') no-repeat center / cover;
     height: 18vh;
     display: flex;
     justify-content: flex-start;
