@@ -1,0 +1,100 @@
+/* Reset básico */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background: url('../../../public/Rectangle 20.png') no-repeat center/cover;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+    z-index: 10;
+    position: absolute;
+}
+
+header img {
+    max-width: 30%;
+    margin-right: 3vw;
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu nav a {
+    font-size: 2vh;
+    color: #616161;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Conteúdo principal */
+.content {
+    margin: 20vh auto 0;
+    width: 80vw;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.search{
+    margin-left: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.search input[type="search"]{
+    width: 30vw;
+    height: 4vh;
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding-left: 1vw;
+}
+
+#infos {
+    margin: 20px auto;
+    padding: 1rem;
+    border: 1px solid lightgreen;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+
+.nutricionista_area .nutricionista_bg_box .bg_img_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-nutri {
+    width: 25rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.nutri_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nutri_section .img-box img {
+    max-width: 100%;
+    /* Garante que a imagem ocupe o máximo de espaço possível sem perder proporção */
+    height: auto;
+}
+
+.nutri_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Mantenha a altura automática para ajustar conforme o conteúdo */
+}
+
+.nutricionista_area {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Garante que o conteúdo não exceda a área da seção */
+    height: 89vh;
+    /* Ajuste o valor para a altura desejada */
+}
+
+.nutricionista_area .nutricionista_bg_box img {
+    width: 100%;
+    /* Para ocupar a largura total da seção */
+    height: 100%;
+    /* Para garantir que a altura da imagem preencha a seção */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir toda a área do container */
+}
+
+.nutricionista_area .nutricionista_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mantém a altura da imagem igual à altura da seção */
+    overflow: hidden;
+    /* Impede que o conteúdo exceda a seção */
+}
+
+.nutri_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nutricionista_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-nutri {
+    max-width: 100%;
+    /* Ajusta a imagem para que não exceda o tamanho do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.texto-nutri {
+    width: 35rem;
+    padding: 0 0 2rem;
+}

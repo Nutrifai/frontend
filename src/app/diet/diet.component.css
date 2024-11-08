@@ -1,0 +1,97 @@
+/* Estilo do corpo */
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Estilização do cabeçalho */
+header {
+    position: absolute; /* Mantém o cabeçalho fixo no topo */
+    width: 100vw;
+    background: url('../../../public/Rectangle 20.png') no-repeat center center / cover;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10; /* Garante que o cabeçalho fique na frente */
+}
+
+header img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 3vw;
+}
+
+/* Estilo do menu de navegação */
+.menu nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu nav ul li a {
+    font-family: Open Sans, sans-serif; /* Adicionado fallback */
+    text-decoration: none;
+    font-size: 2vh;
+    color: #616161;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    margin-left: 10vw;
+    margin-top: 10vw;
+}
+
+.content h1 {
+    font-size: 4vh;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+}
+
+/* Estilo das seções de refeições */
+.conteudo_comida h1, h2, ul, li {
+    font-family: Open Sans, sans-serif;
+}
+
+main {
+    width: 80vw;
+}
+
+/* Estilo da seção de informações */
+#infos {
+    margin-left: 8vw;
+    border: 1px solid lightgreen;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de opacidade */
+    background-color: white;
+    width: 60vw;
+}
+
+/* Estilo dos detalhes */
+.details {
+    font-size: 1rem;
+    margin-top: 2vw;
+}

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.simboloLista {
+    width: 2rem;
+}
+
+.heading_container.heading_center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+
+.simboloLista {
+    width: 2rem;
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}
+
+.service_section {
+    position: relative;
+}
+
+.service_section .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.service_section .btn-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    background-color: #387c4c;
+    border-color: #387c4c;
+    border-radius: 2rem;
+    text-decoration: none
+}
+
+.service_section .btn-box a:hover {
+    background-color: #174625;
+}
+
+.item-lista-invista {
+    font-size: large;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.invista-itens {
+    top: 3rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.txt-invista {
+    width: 50%;
+    display: -webkit-inline-box;
+}
+
+.texto-verde-escuro {
+    color: #387c4c;
+}

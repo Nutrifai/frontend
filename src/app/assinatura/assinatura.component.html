@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Link para o arquivo de estilos externos -->
     <link rel="stylesheet" type="text/css" href="assinatura.component.css" media="screen" />
     <title>Assinaturas</title>
   </head>
   <body>
+    <!-- Cabeçalho com logotipo e menu de navegação -->
     <header class="menu">
-        <img src="../../assets/files/Features.png" alt="Features">
+        <img src="Features.png" alt="Features" />
         <nav>
             <ul>
                 <li><a href="../../index.html">Sobre Nós</a></li>
@@ -16,45 +18,41 @@
                 <li><a href="../assinatura/assinatura.component.html" id="assinatura">Assinatura</a></li>
             </ul>
         </nav>
-    </header>    
-    
+    </header>
+
+    <!-- Imagem de fundo -->
     <div class="background"></div>
-    
+
+    <!-- Conteúdo principal da página -->
     <main class="content">
-        <section id="form3">
+        <section id="assinature">
+            <h1>Confira nosso Plano de Assinatura</h1>
             
-        <h1>Confira nosso Plano de Assinatura</h1>
-        <form class="assinatura_form">
-            <h3>6 meses</h3>
+            <!-- Formulário de assinatura -->
+            <form class="assinatura_form">
+                <h3>6 meses</h3>
+                <h2>R$ 45,00</h2>
+                <h4>Mensal</h4>
 
-            <h2>R$ 45,00</h2>
-            <h4>Mensal</h4>
+                <nav>
+                    <ul>
+                        <li>Consultas com Nutricionistas</li>
+                        <li>Gerar cardápios ilimitados</li>
+                        <li>Desconto em produtos</li>
+                    </ul>
+                </nav>
 
-            <nav>
-                <ul>
-                    <li>
-                        Consultas com Nutricionistas
-                    </li>
-                    <li>
-                        Gerar cardápios ilimitados
-                    </li>
-                    <li>
-                        Desconto em produtos
-                    </li>
-                </ul>
-            </nav>
+                <!-- Botão de envio -->
+                <div class="text_assinatura">
+                    <input type="submit" value="Obter" />
+                </div>
+            </form>
 
-            <div class="text_login">
-                <input type="submit" value="Obter">
+            <!-- Link para login, caso o usuário já seja assinante -->
+            <div class="text_assinatura">
+                <label>Já é assinante? </label><a href="../login/login.component.html" id="voltarLoginAssinatura">Entrar</a>
             </div>
-        </form>
-
-        <div class="text_login">
-            <label>Já é assinante? </label><a href="../login/login.component.html" id="voltarLoginAssinatura">Entrar</a>
-        </div>
         </section>
-
     </main>
-
   </body>
 </html>

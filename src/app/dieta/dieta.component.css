@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.heading_container.heading_center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+.team_section {
+    text-align: center;
+    color: black;
+}
+
+.team_section .heading_container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.team_section .team_container {
+    padding: 0 15px;
+}
+
+
+.team_section .team_container .box {
+    padding: 35px 0 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team_section .team_container .box .img-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+.team_section .team_container .box .detail-box {
+    margin: 25px 0;
+
+}
+
+.team_section .team_container .box .detail-box h5 {
+    color: black;
+    font-weight: 600;
+    position: relative;
+}
+
+.team_section .team_container .box .detail-box {
+    flex: 2;
+    /* Define largura do texto */
+    text-align: left;
+    /* Alinha o texto à direita */
+    margin-left: 20px;
+    /* Espaçamento entre a imagem e o texto */
+}
+
+.texto-rotina {
+    font-size: medium;
+}
+
+.titulo-rotina {
+    font-size: x-large;
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

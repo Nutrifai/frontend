@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+.cadastro_section {
+    background-color: #e0f4e4;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 auto;
+    /* Garante que a section fique no centro da página */
+    padding: 2rem 0;
+    /* Espaçamento superior e inferior */
+    width: 45rem;
+    /* Definir uma largura máxima para evitar que a section se estenda demais */
+    border-radius: 3rem;
+}
+
+.titulocadastro {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+.btnCadastrarAdd {
+    width: 15rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    background-color: #387c4c;
+    border-color: #387c4c;
+    border-radius: 2rem;
+}
+
+.btnCadastrarAdd:hover {
+    background-color: #174625;
+}
+
+.imgInterrogacao {
+    width: 6rem;
+    height: auto;
+    margin-right: 3rem;
+    /* Mantém a proporção da imagem */
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.simboloLista {
+    width: 2rem;
+}
+
+.item-lista {
+    margin-bottom: 2rem;
+    font-size: large;
+    list-style: none;
+}
+
+.lista-saudavel {
+    margin-top: 9rem;
+}
+
+.conteudo-saudavel {
+    margin-top: -10rem;
+}
+
+.layout_padding {
+    padding: 3rem 0;
+}
+
+.what_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.what_section {
+    padding: 3rem 0;
+    /* Adiciona um espaçamento vertical */
+    position: relative;
+    /* Garante que a section tenha uma posição definida */
+}
+
+.what_section .conteudo-saudavel {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Garante que o texto e a imagem fiquem bem distribuídos */
+    margin-top: 3rem;
+    /* Ajuste de margem superior para evitar sobreposição */
+}
+
+.what_section .img-box img {
+    max-width: 100%;
+    /* Garante que a imagem ocupe o máximo de espaço possível sem perder proporção */
+    height: auto;
+}
+
+.what_section .detail-box {
+    padding: 1rem;
+    /* Adiciona espaçamento interno ao box de detalhes */
+}
+
+.what_section .lista-saudavel {
+    margin-top: 1rem;
+    /* Ajusta o espaçamento entre o título e a lista */
+}
+
+.what_section h2 {
+    font-size: 2.5rem;
+    /* Define um tamanho consistente para os títulos */
+}
+
+.what_section ul {
+    padding-left: 0;
+}
+
+.what_section li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    /* Ajusta o tamanho do texto para melhor legibilidade */
+    margin-bottom: 1rem;
+}
+
+.what_section .simboloLista {
+    width: 1.5rem;
+    /* Ajusta o tamanho dos ícones da lista */
+    margin-right: 1rem;
+    /* Adiciona espaçamento entre o ícone e o texto */
+}
+
+
+.simboloLista {
+    width: 2rem;
+}
+
+.item-lista {
+    margin-bottom: 2rem;
+    font-size: large;
+    list-style: none;
+}
+
+.lista-saudavel {
+    margin-top: 9rem;
+}
+
+.conteudo-saudavel {
+    margin-top: -10rem;
+}
+
+.row {
+    height: 100%;
+    /* Garante que a linha ocupe toda a altura disponível */
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
