@@ -1,9 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderGeralComponent } from '../header-geral/header-geral.component';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../service/user.service';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastro',
