@@ -16,7 +16,7 @@ body {
 /* Cabeçalho */
 header {
     width: 100%;
-    background: url('../../../public/Rectangle 20.png') no-repeat center/cover;
+    background: url('../../../public/Rectangle20.png') no-repeat center/cover;
     height: 20vh;
     display: flex;
     align-items: center;
