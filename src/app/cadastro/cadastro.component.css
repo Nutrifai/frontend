@@ -28,7 +28,7 @@ body {
 /* Estilo do formulário */
 form {
   width: 40%;
-  height: 70%;
+  height: 29rem;
   position: absolute; /* Posiciona o formulário sobre a imagem */
   z-index: 9; /* Garante que o formulário fique sobre a imagem */
   background-color: rgba(255,255,255, 0.8); /* Fundo semitransparente para destacar o formulário */

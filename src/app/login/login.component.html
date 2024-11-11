@@ -1,23 +1,31 @@
 <app-header-geral></app-header-geral>
 <section>
     <div class="background"></div>
-    <form id="login">
+    <form id="login" [formGroup]="loginForm" (submit)="onSubmit(); $event.preventDefault()">
         <h1 class="font-weight-bold">Entrar</h1>
+
         <!-- Campo de entrada de email -->
         <div class="text_login">
-            <label for="email">Login</label><br>
-            <input type="email" id="email" placeholder="abc@gmail.com">
+            <label for="userId">Login</label><br>
+            <input type="userId" id="userId" formControlName="userId" placeholder="Nome de usuário">
         </div>
 
         <!-- Campo de entrada de senha -->
         <div class="text_login">
             <label for="password">Senha</label><br>
-            <input type="password" id="password" placeholder="...........">
+            <input type="password" id="password" formControlName="password" placeholder="*********">
         </div>
 
         <!-- Botão de envio do formulário -->
         <div class="text_login_submit">
             <input type="submit" value="Concluído">
         </div>
+
+        <!-- Mensagem de erro, se houver -->
+        @if(errorMessage()) {
+            <div class="errorMsg">
+              {{ errorMessage()}}
+            </div>
+        }
     </form>
 </section>

@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { HeaderGeralComponent } from '../header-geral/header-geral.component';
 import { Router, RouterLink } from '@angular/router';
-import { UserService } from '../service/user.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpService } from '../service/http/http.service';
 import { JsonPipe } from '@angular/common';
@@ -28,7 +27,7 @@ export class CadastroComponent {
 
   onSubmit(): void {
     if(this.userForm.invalid) {
-      this.errorMessage.set("PREENCHE DIREITO PFF!")
+      this.errorMessage.set("Por favor, preencha todos os campos corretamente!")
       return
     }
     
