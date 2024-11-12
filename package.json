@@ -21,7 +21,7 @@
     "@angular/material-date-fns-adapter": "^18.2.12",
     "@angular/material-luxon-adapter": "^18.2.12",
     "@angular/material-moment-adapter": "^18.2.12",
-    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser": "^18.2.11",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "bootstrap": "^5.3.3",
