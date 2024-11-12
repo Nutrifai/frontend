@@ -28,7 +28,7 @@ body {
 /* Estilo do formulário */
 form {
   width: 40%;
-  height: 70%;
+  height: 29rem;
   position: absolute; /* Posiciona o formulário sobre a imagem */
   z-index: 9; /* Garante que o formulário fique sobre a imagem */
   background-color: rgba(255,255,255, 0.8); /* Fundo semitransparente para destacar o formulário */
@@ -45,6 +45,7 @@ form {
 
 /* Estilo dos elementos de entrada */
 .text_cadastro {
+  width: 100%;
   margin-top: 4vh;
 }
 
@@ -63,7 +64,7 @@ form {
 /* Estilo do botão de submissão */
 .text_cadastro input[type="submit"] {
   font-size: 2vh;
-  min-width: 60%;
+  width: 100%;
   border: 1px solid;
   background-color: #387c4c;
   border-color: #387c4c;
@@ -71,11 +72,6 @@ form {
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .div-btn {
@@ -105,4 +101,10 @@ form {
 
 .text_login {
   color: #387c4c;
+}
+
+.errorMsg { 
+  margin-top: 10px;
+  font-weight: 400;
+  color: #ff0000;
 }

@@ -6,13 +6,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'https://0dpi6c64oh.execute-api.sa-east-1.amazonaws.com/api/register';
+  private apiUrlRegister = 'https://0dpi6c64oh.execute-api.sa-east-1.amazonaws.com/api/register';
+  private apiUrlLogin = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/login';
 
   constructor(private http: HttpClient) {}
 
   register(userId: string, email: string, password: string): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const body = { userId, email, password };
-    return this.http.post(this.apiUrl, body);
+    return this.http.post(this.apiUrlRegister, body);
+  }
+
+  login(userId: string, password: string): Observable<any> {  // Alterado para userId
+    const body = { userId, password };  // Alterado para userId
+    return this.http.post(this.apiUrlLogin, body);
   }
 }
