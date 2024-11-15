@@ -1,0 +1,82 @@
+
+main {
+    flex: 1;
+    display: flex;
+    columns: 2;
+    justify-content: center;
+    position: relative;
+    z-index: 5; /* O z-index está bem aqui para a estrutura */
+    margin-left: 10vw; /* Ajusta a posição */
+    margin-top: 5vw;
+}
+
+main h1,h2,p{
+    font-family: Open Sans;
+}
+
+main img{
+    width: 40vw;
+    margin-top: 1.5vw;
+}
+
+main section{
+    margin-top: 5vw;
+    width: 40vw;
+}
+
+main h1{
+    font-size: 1.5rem;
+    margin-bottom: 1vw;
+}
+
+main p{
+    font-size: 1.2rem;
+}
+
+section{
+    text-align: justify;
+}
+
+.nutricionista{
+    height: auto;
+    border-left: 1px solid gray;
+    padding-left: 3vw;
+}
+
+.dados_nutricionistas{
+    border: 1px solid #32794F;
+    border-width: 0px 0px 3px 0px;
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 2vh;
+}
+
+.dados_nutricionistas label{
+    font-size: 2rem;
+}
+
+.horarios_nutricionistas label {
+    font-size: 1rem;
+    border: 1px solid #E7FFEC;
+    background-color: #E7FFEC;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.dados_nutricionistas ul, .horarios_nutricionistas ul{
+    list-style: none;
+}
+
+.dados_nutricionistas ul, .horarios_nutricionistas ul{
+    display: flex;
+    align-items: center;
+}
+
+.dados_nutricionistas li, .horarios_nutricionistas li{
+    margin-left: 1vw;
+}
+
+.dados_nutricionistas img{
+    width: 7vw;
+}
