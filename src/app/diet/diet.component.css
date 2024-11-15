@@ -1,57 +1,203 @@
 /* Estilo da seção de informações */
 #infos {
-    border: 1px solid lightgreen;
-    border-radius: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    /* Sombra preta com 50% de opacidade */
-    background-color: white;
-    width: 100%;
+  border: 1px solid lightgreen;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  /* Sombra preta com 50% de opacidade */
+  background-color: white;
+  width: 100%;
 }
 
 /* Estilo dos detalhes */
 .details {
-    font-size: 1rem;
-    margin-top: 2vw;
+  font-size: 1rem;
+  margin-top: 2vw;
 }
 
 .section {
-    top: 9rem;
-    position: relative;}
+  top: 9rem;
+  position: relative;
+}
 
 /* Estilos da div content */
 .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow-y: auto;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    box-sizing: border-box;
-    padding: 2rem;
-    height: 25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-sizing: border-box;
+  padding: 2rem;
+  height: 25rem;
 
 }
 
 .details {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
 }
 
 h1 {
-    text-align: center;
-    /* Centraliza o título principal */
-    margin-bottom: 30px;
+  text-align: center;
+  /* Centraliza o título principal */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
 p {
-    text-align: center;
-    font-style: italic;
-    margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  margin-top: 30px;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.modal-body {
+  display: flex;
+  padding: 0;
+  border-radius: 4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content {
+  width: 80%; /* Ajuste para o tamanho desejado */
+  max-width: 700px; /* Limita o tamanho máximo */
+  margin: auto;
+  border-radius: 4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content h1 {
+  text-align: center;
+}
+
+.modal-content h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+form {
+  font-size: 0.9rem;
+}
+
+.column {
+  flex: 0%;
+  padding: 10px;
+}
+
+#secondary {
+  background-color: #ddf7e3;
+  border-radius: 0 4rem 4rem 0;
+  text-align: center;
+  width: 15%;
+  /* Reduz a largura para 30% */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  /* Ajusta o padding interno */
+}
+
+.column#main {
+  padding: 4rem;
+  position: relative;
+  z-index: 1;
+  height: 0;
+}
+
+#svg {
+  z-index: 1;
+  margin-left: -10rem;
+}
+
+
+#main .form-control {
+  border-radius: 0;
+  font-size: .9em;
+}
+
+.btn {
+  text-transform: uppercase;
+  width: 200px;
+  padding: .150rem .75rem;
+  margin: 30px auto;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  height: 2rem;
+}
+
+.btn-primary {
+  background-color: #387c4c;
+  border-color: #387c4c;
+  display: -webkit-box;
+  border-radius: 2rem;
+}
+
+.btn-primary:hover {
+  border-color: rgba(255, 255, 255);
+}
+
+#main .btn-primary {
+  width: 50%;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.modal-body label {
+  margin-bottom: 0;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group .form-control {
+  flex: 1;
+}
+
+.unidade {
+  margin-left: 0.5rem;
+}
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 100%; /* Permite que o modal se ajuste ao conteúdo */
+  height: 100vh; /* Ocupa a altura da viewport para centralizar verticalmente */
+}
+
+.btn-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.warning-text {
+  margin: 0;
+  font-style: italic;
+}
+
+.btn-right-align {
+  margin-left: auto; /* Empurra o botão para o lado direito */
 }

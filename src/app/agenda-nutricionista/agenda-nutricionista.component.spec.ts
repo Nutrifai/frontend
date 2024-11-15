@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AgendaNutricionistaComponent } from './agenda-nutricionista.component';
+import { DatepickerTouchExampleComponent } from '../datepicker-touch-example/datepicker-touch-example.component';
 
 describe('AgendaNutricionistaComponent', () => {
   let component: AgendaNutricionistaComponent;
@@ -8,7 +9,7 @@ describe('AgendaNutricionistaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AgendaNutricionistaComponent]
+      imports: [AgendaNutricionistaComponent, DatepickerTouchExampleComponent]
     })
     .compileComponents();
 
