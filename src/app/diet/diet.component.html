@@ -1,37 +1,154 @@
 <app-header-geral></app-header-geral>
 <section class="container section">
-    <h1>Dieta de Baixo Carboidrato</h1>
-    <div id="infos" class="content">
-        <div class="conteudo_comida">
-            <h2>Café da manhã</h2>
-            <ul>
-                <li>Omelete (2 ovos) com espinafre, queijo e abacate (~350 kcal) ou</li>
-                <li>Iogurte grego (150g) com 1 colher de sopa de linhaça e framboesas (~300 kcal) ou</li>
-                <li>Smoothie de leite de amêndoas (200 ml), 5 morangos e 1 colher de chá de manteiga de amendoim (~250 kcal)</li>
-            </ul>
-        </div>
-    
-        <div class="conteudo_comida">
-            <h2>Almoço</h2>
-            <ul>
-                <li>Frango grelhado (120g) com salada de folhas verdes e azeite (~400 kcal) ou</li>
-                <li>Peixe grelhado (120g) com aspargos e espinafre refogado (~350 kcal) ou</li>
-                <li>Salada de atum (1 lata) com alface, tomate e abacate (~400 kcal)</li>
-            </ul>
-        </div>
-    
-        <div class="conteudo_comida">
-            <h2>Jantar</h2>
-            <ul>
-                <li>Salmão grelhado (120g) com brócolis e azeite (~350 kcal) ou</li>
-                <li>Carne moída refogada (100g) com abobrinha e couve-flor (~400 kcal) ou</li>
-                <li>Frango desfiado (120g) com abóbora assada e cenoura (~350 kcal)</li>
-            </ul>
-        </div>
-    
-        <div class="conteudo_comida">
-            <h2 class="details">Aproximadamente 1064 kcal por dia</h2>
-        </div>
+  <h1>Cardápio gerado por IA</h1>
+  <div id="infos" class="content">
+    <div class="conteudo_comida">
+      <h2>Café da manhã</h2>
+      <ul>
+        <li>Omelete (2 ovos) com espinafre, queijo e abacate (~350 kcal) ou</li>
+        <li>Iogurte grego (150g) com 1 colher de sopa de linhaça e framboesas (~300 kcal) ou</li>
+        <li>Smoothie de leite de amêndoas (200 ml), 5 morangos e 1 colher de chá de manteiga de amendoim (~250 kcal)
+        </li>
+      </ul>
     </div>
-    <p>A inteligência artificial pode cometer erros; por isso, é sempre aconselhável consultar um nutricionista.</p>
+
+    <div class="conteudo_comida">
+      <h2>Almoço</h2>
+      <ul>
+        <li>Frango grelhado (120g) com salada de folhas verdes e azeite (~400 kcal) ou</li>
+        <li>Peixe grelhado (120g) com aspargos e espinafre refogado (~350 kcal) ou</li>
+        <li>Salada de atum (1 lata) com alface, tomate e abacate (~400 kcal)</li>
+      </ul>
+    </div>
+
+    <div class="conteudo_comida">
+      <h2>Jantar</h2>
+      <ul>
+        <li>Salmão grelhado (120g) com brócolis e azeite (~350 kcal) ou</li>
+        <li>Carne moída refogada (100g) com abobrinha e couve-flor (~400 kcal) ou</li>
+        <li>Frango desfiado (120g) com abóbora assada e cenoura (~350 kcal)</li>
+      </ul>
+    </div>
+
+    <div class="conteudo_comida">
+      <h2 class="details">Aproximadamente 1064 kcal por dia</h2>
+    </div>
+  </div>
+
+  <div class="btn-text-container">
+    <p class="warning-text">
+      A inteligência artificial pode cometer erros; por isso, é sempre aconselhável consultar um nutricionista.
+    </p>
+    <div class="btn-right-align">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Gerar Cardápio
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="column" id="main">
+            <h1 class="font-weight-bold">Gerar Cardápio</h1>
+            <form>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="idade">Idade <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="idade" placeholder="18">
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="sexo">Sexo <span class="text-danger">*</span></label>
+                    <select class="form-control" id="sexo">
+                      <option value="" disabled selected>Selecione</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="altura">Altura <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="altura" placeholder="1,70">
+                      <span class="unidade">m</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="objetivo">Objetivo <span class="text-danger">*</span></label>
+                    <select class="form-control" id="objetivo">
+                      <option value="" disabled selected>Selecione</option>
+                      <option value="manter">Manter Peso</option>
+                      <option value="perder">Perder Peso</option>
+                      <option value="ganhar">Ganhar Massa Muscular</option>
+                      <option value="reeducar">Reeducação Alimentar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="peso">Peso Atual <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="peso" placeholder="75,40">
+                      <span class="unidade">kg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="atividadeFisica">Nível de Atividade Física <span class="text-danger">*</span></label>
+                    <select class="form-control" id="atividadeFisica">
+                      <option value="" disabled selected>Selecione</option>
+                      <option value="sedentario">Sedentário</option>
+                      <option value="moderado">Moderado</option>
+                      <option value="ativo">Ativo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="refeicoes">Refeições por dia <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="refeicoes" placeholder="3">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="condicaoSaude">Condição de Saúde Diagnosticada</label>
+                <input type="text" class="form-control" id="condicaoSaude"
+                  placeholder="Condição de Saúde Diagnosticada">
+              </div>
+              <div class="form-group">
+                <label for="intolerancia">Possui Intolerância</label>
+                <input type="text" class="form-control" id="intolerancia"
+                  placeholder="Possui Intolerância">
+              </div>
+              <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+          </div>
+          <div>
+            <svg id="svg" width="67px" height="578" viewBox="0 0 67 578" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path
+                d="M11.3847656,-5.68434189e-14 C-7.44726562,36.7213542 5.14322917,126.757812 49.15625,270.109375 C70.9827986,341.199016 54.8877465,443.829224 0.87109375,578 L67,578 L67,-5.68434189e-14 L11.3847656,-5.68434189e-14 Z"
+                id="Path" fill="#ddf7e3"></path>
+            </svg>
+          </div>
+          <div class="column" id="secondary">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

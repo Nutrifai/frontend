@@ -1,10 +1,19 @@
-<header class="menu">
-    <img src="Features.png" alt="Features" />
-    <nav>
+<nav class="nav">
+    <div class="nav-logo">
+        <img src="NutrifAI Logo.png" alt="Logo da NutrifAI">
+    </div>
+    <div class="nav-menu" id="navMenu">
         <ul>
-            <li><a href="../../index.html">Sobre Nós</a></li>
-            <li><a href="#contact">Recursos</a></li>
-            <li><a href="../assinatura/assinatura.component.html" id="assinatura">Assinatura</a></li>
+            <li><a href="#inicioHome" class="link">Home</a></li>
+            <li><a href="#" class="link">Sobre</a></li>
+            <li><a href="#footer" class="link">Recursos</a></li>
         </ul>
-    </nav>
-</header>
+    </div>
+    <div class="nav-button">
+        <button routerLink="/login" class="btn white-btn" id="loginBtn">Entrar</button>
+        <button routerLink="/cadastro" class="btn" id="registerBtn" onclick="register()">Cadastrar</button>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+</nav>
