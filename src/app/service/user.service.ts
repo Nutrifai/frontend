@@ -7,7 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   private apiUrlRegister = 'https://0dpi6c64oh.execute-api.sa-east-1.amazonaws.com/api/register';
+
   private apiUrlLogin = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/login';
+
+  private apiUrlAgendaNutricionista = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/nutritionists';
 
   constructor(private http: HttpClient) {}
 
@@ -20,4 +23,9 @@ export class UserService {
     const body = { userId, password };  // Alterado para userId
     return this.http.post(this.apiUrlLogin, body);
   }
+
+  nutritionist(){
+    return this.http.get(this.apiUrlAgendaNutricionista);
+  }
+
 }
