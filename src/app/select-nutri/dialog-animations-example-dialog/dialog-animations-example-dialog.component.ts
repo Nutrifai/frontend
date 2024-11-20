@@ -1,55 +1,50 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogRef, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
+import { Component, inject } from '@angular/core';
+import { DateTimeService } from '../date-time.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'dialog-animations-example',
+  templateUrl: './dialog-animations-example.component.html',
   styleUrls: ['dialog-animations-example-dialog.component.css'],
-  templateUrl: 'dialog-animations-example.component.html',
   standalone: true,
-  imports: [MatButtonModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [],
 })
 export class DialogAnimationsExample {
-  readonly dialog = inject(MatDialog);
+  private dateTimeService = inject(DateTimeService);
+  private http = inject(HttpClient); // Para realizar o POST
 
-  // Propriedade para armazenar a resposta do diálogo
-  dialogResult: boolean | null = null;
+  openDialog(selectedTime: string): void {
+    const selectedDate = this.dateTimeService.getDate();
+    if (!selectedDate) {
+      alert('Por favor, selecione uma data primeiro.');
+      return;
+    }
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    const dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
-      width: '300px',
-      enterAnimationDuration,
-      exitAnimationDuration,
+    const dataToPost = {
+      date: selectedDate,
+      time: selectedTime,
+    };
+
+    // Realiza o POST via API
+    /*
+    this.http.post('URL_DA_API', dataToPost).subscribe({
+      next: () => console.log('Agendamento realizado com sucesso:', dataToPost),
+      error: (err) => console.error('Erro ao realizar agendamento:', err),
     });
-
-    // Captura o resultado após o fechamento do diálogo e exibe no console
-    dialogRef.afterClosed().subscribe(result => {
-      this.dialogResult = result;
-      console.log('Resposta do diálogo:', result); // Depuração no console
+    
+    this.http.post('URL_DA_API', dataToPost).subscribe({
+      next: (response) => {
+        console.log('Agendamento realizado com sucesso. Dados enviados:', dataToPost);
+        console.log('Resposta da API:', response); // Exibe os dados retornados pela API
+      },
+      error: (err) => {
+        console.error('Erro ao realizar agendamento:', err);
+      },
     });
-  }
-}
+    */
+        
+    // Simula o que seria enviado para a API, exibindo no console
+        console.log('Dados que seriam enviados:', dataToPost);
 
-@Component({
-  selector: 'dialog-animations-example-dialog',
-  template: `
-    <h2 mat-dialog-title>Confirmar horário</h2>
-    <mat-dialog-content>Confirma este horário de agendamento?</mat-dialog-content>
-    <mat-dialog-actions>
-      <button mat-button (click)="close(false)">No</button>
-      <button mat-button cdkFocusInitial (click)="close(true)">Yes</button>
-    </mat-dialog-actions>
-  `,
-  standalone: true,
-  imports: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-})
-export class DialogAnimationsExampleDialog {
-  readonly dialogRef = inject(MatDialogRef<DialogAnimationsExampleDialog>);
-
-  // Método para fechar o diálogo com a resposta
-  close(answer: boolean): void {
-    this.dialogRef.close(answer);
   }
 }

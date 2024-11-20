@@ -1,27 +1,22 @@
-
-<p *ngIf="dialogResult !== null">
-  Resposta do usuário: {{ dialogResult ? 'Sim' : 'Não' }}
-</p>
-
 <nav class="horarios_nutricionistas">
-    <ul>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">09:00</button>
-      </li>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">09:30</button>
-      </li>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">10:00</button>
-      </li>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">11:00</button>
-      </li>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">13:30</button>
-      </li>
-      <li class="horarios">
-        <button mat-button (click)="openDialog('200ms', '200ms')" id="">15:30</button>
-      </li>
-    </ul>
-  </nav>
+  <ul>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('09:00')">09:00</button>
+    </li>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('09:30')">09:30</button>
+    </li>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('10:00')">10:00</button>
+    </li>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('11:00')">11:00</button>
+    </li>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('13:30')">13:30</button>
+    </li>
+    <li class="horarios">
+      <button mat-button (click)="openDialog('15:30')">15:30</button>
+    </li>
+  </ul>
+</nav>
