@@ -1,18 +1,33 @@
 <nav class="nav">
     <div class="nav-logo">
-        <img src="NutrifAI Logo.png" alt="Logo da NutrifAI">
+        <a routerLink="/inicio"><img src="NutrifAI Logo.png" alt="Logo da NutrifAI" /></a>
     </div>
     <div class="nav-menu" id="navMenu">
         <ul>
-            <li><a href="#inicioHome" class="link">Home</a></li>
-            <li><a href="#" class="link">Sobre</a></li>
-            <li><a href="#footer" class="link">Recursos</a></li>
+            <li><a routerLink="/inicio" fragment="sobre" class="link">Sobre</a></li>
+            <li><a routerLink="/inicio" fragment="footer" class="link">Recursos</a></li>
+            <li><a routerLink="/assinatura" class="link">Assinatura</a></li>
+            <li><a routerLink="/dietai" class="link">Histórico</a></li>
         </ul>
     </div>
-    <div class="nav-button">
-        <button routerLink="/login" class="btn white-btn" id="loginBtn">Entrar</button>
-        <button routerLink="/cadastro" class="btn" id="registerBtn" onclick="register()">Cadastrar</button>
-    </div>
+    <div>
+        <ul>
+          <li>
+            <div class="user-container">
+              <img src="userIcon.png" class="profile" />
+              <label for="name" class="nome-usuario">Usuário</label>
+            </div>
+            <ul>
+              <li class="sub-item">
+                <p><img src="password.png" class="icon"/>Senha</p>
+              </li>
+              <li class="sub-item">
+                <p><img src="logout.png" class="icon"/>Logout</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
     <div class="nav-menu-btn">
         <i class="bx bx-menu" onclick="myMenuFunction()"></i>
     </div>

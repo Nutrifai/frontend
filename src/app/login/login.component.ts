@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { HeaderGeralComponent } from '../header-geral/header-geral.component';
+import { HeaderComponent } from '../header/header.component';
 import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpService } from '../service/http/http.service';
@@ -8,7 +8,7 @@ import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HeaderGeralComponent, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [HeaderComponent, FormsModule, ReactiveFormsModule, JsonPipe, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

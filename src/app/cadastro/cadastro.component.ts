@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { HeaderGeralComponent } from '../header-geral/header-geral.component';
+import { HeaderComponent } from '../header/header.component';
 import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpService } from '../service/http/http.service';
@@ -8,7 +8,7 @@ import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [HeaderGeralComponent, RouterLink, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [HeaderComponent, RouterLink, FormsModule, ReactiveFormsModule, JsonPipe],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
@@ -18,7 +18,7 @@ export class CadastroComponent {
   router = inject(Router)
 
   userForm = this.formBuilder.group({
-    userId: ['', [Validators.required]],
+    userId: ['', [Validators.required, Validators.maxLength(16), Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(8)]]
   })
