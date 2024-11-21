@@ -3,7 +3,7 @@ import { DatepickerTouchExampleComponent } from "../datepicker-touch-example/dat
 import { HttpClient } from '@angular/common/http';
 import { DialogAnimationsExample } from './dialog-animations-example-dialog/dialog-animations-example-dialog.component';
 import { HttpService } from '../service/http/http.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { SettingsService } from '../settings.service';
 import { UserService } from '../service/user.service';
@@ -11,7 +11,7 @@ import { UserService } from '../service/user.service';
 @Component({
   selector: 'app-select-nutri',
   standalone: true,
-  imports: [DatepickerTouchExampleComponent, DialogAnimationsExample],
+  imports: [DatepickerTouchExampleComponent, DialogAnimationsExample, RouterLink],
   templateUrl: './select-nutri.component.html',
   styleUrl: './select-nutri.component.css'
 })

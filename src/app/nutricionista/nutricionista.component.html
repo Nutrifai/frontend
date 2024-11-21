@@ -1,45 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!-- Link para o arquivo de estilos externos -->
-    <link rel="stylesheet" type="text/css" href="nutricionista.component.css" media="screen" />
-    <title>Nutricionista</title>
-  </head>
-  <body>
-    <!-- Cabeçalho com logotipo e menu de navegação -->
-    <header class="menu">
-        <img src="Features.png" alt="Features" />
-        <nav>
-            <ul>
-                <li><a href="" class="link active">Sobre Nós</a></li>
-                <li><a href="">Recursos</a></li>
-                <li><a href="">Assinatura</a></li>
-            </ul>
-        </nav>
-    </header>    
-    
-    <!-- Conteúdo principal -->
-    <main class="content">
-        <!-- Imagem representativa da página -->
-        <img src="nutricionista_page.png" alt="Imagem de nutricionista" />
-        
-        <!-- Seção informativa sobre consulta -->
-        <section>
-            <h1>Agende sua consulta com um dos nossos nutricionistas!</h1>
-            <p>
-                Receba sugestões de ajustes na sua dieta criadas por uma inteligência artificial que analisa seus hábitos, evolução e preferências, potencializando os resultados ao longo do acompanhamento.
-            </p> 
-            <p>
-                Cuide da sua saúde no ambiente em que se sente mais à vontade. Segurança e conforto na palma da sua mão!
-            </p>
-            
-            <!-- Botão de agendamento -->
-            <div>
-                <input type="submit" value="Agendamento Online" />
-            </div>
-        </section>
-    </main>
-  </body>
-</html>
+<app-header-geral></app-header-geral>
+<!-- Conteúdo principal -->
+<main class="content">
+    <!-- Imagem representativa da página -->
+    <img src="nutricionista_page.png" alt="Imagem de nutricionista" />
+
+    <!-- Seção informativa sobre consulta -->
+    <section>
+        <h1>Agende sua consulta com um dos nossos nutricionistas!</h1>
+        <p>
+            Receba sugestões de ajustes na sua dieta criadas por uma inteligência artificial que analisa seus hábitos,
+            evolução e preferências, potencializando os resultados ao longo do acompanhamento.
+        </p>
+        <p>
+            Cuide da sua saúde no ambiente em que se sente mais à vontade. Segurança e conforto na palma da sua mão!
+        </p>
+
+        <!-- Botão de agendamento -->
+        <div>
+            <input  routerLink="/agenda_nutricionista" type="submit" value="Agendamento Online" />
+        </div>
+    </section>
+</main>
