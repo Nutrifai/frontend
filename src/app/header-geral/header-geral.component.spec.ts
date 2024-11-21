@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { HeaderGeralComponent } from './header-geral.component';
 
 describe('HeaderGeralComponent', () => {
@@ -8,7 +8,10 @@ describe('HeaderGeralComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderGeralComponent]
+      imports: [HeaderGeralComponent, RouterModule],  // Incluindo o RouterModule para ativar o roteamento
+      providers: [
+        { provide: ActivatedRoute, useValue: { snapshot: { params: {} } } }  // Mock do ActivatedRoute
+      ]
     })
     .compileComponents();
 
