@@ -8,6 +8,7 @@ import { DietAiComponent } from './diet-ai/diet-ai.component';
 import { AgendaNutricionistaComponent } from './agenda-nutricionista/agenda-nutricionista.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { DatepickerTouchExampleComponent } from './datepicker-touch-example/datepicker-touch-example.component';
+import { DialogAnimationsExample } from './select-nutri/dialog-animations-example-dialog/dialog-animations-example-dialog.component';
 
 export const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'dietai', component: DietAiComponent },
     { path: 'assinatura', component: AssinaturaComponent },
+    { path: 'dialog', component: DialogAnimationsExample },
     { path: 'datepicker', component: DatepickerTouchExampleComponent },
     { path: '', redirectTo: 'inicio', pathMatch: 'full' }, // Redireciona para 'home' por padrão
 ];
