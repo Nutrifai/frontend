@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { HeaderGeralComponent } from '../header-geral/header-geral.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-diet',
   standalone: true,
-  imports: [HeaderGeralComponent],
+  imports: [HeaderComponent],
   templateUrl: './diet.component.html',
   styleUrl: './diet.component.css'
 })

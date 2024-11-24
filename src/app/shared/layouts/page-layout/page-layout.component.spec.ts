@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderGeralComponent } from './header-geral.component';
+import { PageLayoutComponent } from './page-layout.component';
 
-describe('HeaderGeralComponent', () => {
-  let component: HeaderGeralComponent;
-  let fixture: ComponentFixture<HeaderGeralComponent>;
+describe('PageLayoutComponent', () => {
+  let component: PageLayoutComponent;
+  let fixture: ComponentFixture<PageLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderGeralComponent]
+      imports: [PageLayoutComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeaderGeralComponent);
+    fixture = TestBed.createComponent(PageLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

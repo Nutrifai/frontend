@@ -1,14 +1,15 @@
 import { Component, inject, signal } from '@angular/core';
-import { HeaderGeralComponent } from '../header-geral/header-geral.component';
+import { HeaderComponent } from '../header/header.component';
 import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpService } from '../service/http/http.service';
 import { JsonPipe } from '@angular/common';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HeaderGeralComponent, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [HeaderComponent, FormsModule, ReactiveFormsModule, JsonPipe],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -16,6 +17,7 @@ export class LoginComponent {
   httpService = inject(HttpService);
   router = inject(Router);
   formBuilder = inject(FormBuilder);
+  userService = inject(UserService)
 
   loginForm = this.formBuilder.group({
     userId: ['', [Validators.required, Validators.minLength(1)]],
@@ -30,9 +32,11 @@ export class LoginComponent {
       return;
     }
 
-    this.httpService.post("login", this.loginForm.value).subscribe({
-      next: () => this.router.navigate(['/diet']),
+    this.userService.login(this.loginForm.value).subscribe({
+      next: () => {
+        this.router.navigate(['/dietas'])
+      },
       error: (e) => this.errorMessage.set(e.error["error_message"])
-    });
+    })
   }
 }

@@ -2,18 +2,20 @@
     <div class="nav-logo">
         <img src="NutrifAI Logo.png" alt="Logo da NutrifAI">
     </div>
+
     <div class="nav-menu" id="navMenu">
         <ul>
-            <li><a href="#inicioHome" class="link">Home</a></li>
-            <li><a href="#" class="link">Sobre</a></li>
-            <li><a href="#footer" class="link">Recursos</a></li>
+            <li><a routerLink="/inicio" class="link">Home</a></li>
+            <li><a class="link">Sobre</a></li>
+            <li><a class="link">Recursos</a></li>
         </ul>
     </div>
+
     <div class="nav-button">
         <button routerLink="/login" class="btn white-btn" id="loginBtn">Entrar</button>
-        <button routerLink="/cadastro" class="btn" id="registerBtn" onclick="register()">Cadastrar</button>
+        <button routerLink="/cadastro" class="btn" id="registerBtn">Cadastrar</button>
     </div>
     <div class="nav-menu-btn">
-        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        <i class="bx bx-menu"></i>
     </div>
 </nav>

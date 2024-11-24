@@ -1,0 +1,8 @@
+
+<h1>Suas Dietas:</h1>
+
+@for(dieta of dietas(); track $index) {
+    {{ dieta }}
+}@empty {
+    <p>Nenhumas dieta Registrada!</p>
+}
