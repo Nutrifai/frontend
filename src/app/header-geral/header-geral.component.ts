@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-header-geral',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './header-geral.component.html',
+  styleUrl: './header-geral.component.css'
 })
-export class HeaderComponent {
+export class HeaderGeralComponent {
+  userService = inject(UserService)
+
   constructor(private route: ActivatedRoute, private router: Router) {}
+
 
   ngAfterViewInit() {
     this.route.fragment.subscribe(fragment => {
@@ -21,5 +25,11 @@ export class HeaderComponent {
         }
       }
     });
+  }
+
+  logout() {
+    this.userService.logout().subscribe(() => {
+      this.router.navigate(['/inicio'])
+    })
   }
 }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ListaDietasComponent } from './lista-dietas.component';
+import { RouterModule, ActivatedRoute } from '@angular/router';
+import { ListaDietasComponent } from './lista-dietas.component'
 
 describe('ListaDietasComponent', () => {
   let component: ListaDietasComponent;
@@ -8,7 +8,10 @@ describe('ListaDietasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ListaDietasComponent]
+      imports: [RouterModule],  // Incluindo o RouterModule para ativar o roteamento
+      providers: [
+        { provide: ActivatedRoute, useValue: { snapshot: { params: {} } } }  // Mock do ActivatedRoute
+      ]
     })
     .compileComponents();
 

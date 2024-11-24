@@ -15,7 +15,7 @@
 }
 
 .section {
-  top: 9rem;
+  /* top: 9rem; */
   position: relative;
 }
 
@@ -200,4 +200,70 @@ form {
 
 .btn-right-align {
   margin-left: auto; /* Empurra o botão para o lado direito */
+}
+
+
+.content-dietas {
+  margin: 23vh auto 0;
+  width: 80vw;
+}
+
+.content-dietas h1{
+  text-align: center;
+}
+
+
+#infos-dietas {
+  margin: 20px auto;
+  padding: 1rem;
+  border: 1px solid lightgreen;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+#infos-dietas table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#infos-dietas th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#infos-dietas th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#infos-dietas tbody tr {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#infos-dietas tbody tr:hover {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+
+.dieta {
+  max-height: 80vh;
+  padding: 3rem 1rem 1rem 2.5rem;
+  overflow: auto;
+  color: #3f3f3f;
+
+}
+
+.dieta h1 {
+  font-weight: 1000;
+  font-size: 1.6em;
+  color: green;
+}
+
+.dieta h3 {
+  font-weight: 1000;
+  font-size: 1.3em;
 }

@@ -9,7 +9,7 @@ import { UserService } from '../service/user.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HeaderComponent, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [HeaderComponent, FormsModule, ReactiveFormsModule, JsonPipe, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -34,7 +34,7 @@ export class LoginComponent {
 
     this.userService.login(this.loginForm.value).subscribe({
       next: () => {
-        this.router.navigate(['/dietas'])
+        this.router.navigate(['/diet'])
       },
       error: (e) => this.errorMessage.set(e.error["error_message"])
     })

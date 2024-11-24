@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header-geral></app-header-geral>
 <section class="container section">
-  <h1>Cardápio gerado por IA</h1>
+  <!-- <h1>Cardápio gerado por IA</h1>
   <div id="infos" class="content">
     <div class="conteudo_comida">
       <h2>Café da manhã</h2>
@@ -44,28 +44,88 @@
         Gerar Cardápio
       </button>
     </div>
+  </div> -->
+
+  <section class="content-dietas">
+    <h1>Dietas geradas por Inteligência Artificial</h1>
+
+    <div class="btn-right-align">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGerarDieta">
+        Gerar nova dieta
+      </button>
+    </div>
+
+    <div id="infos-dietas">
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Data de criação</th>
+                    <th>Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+              @for(dieta of dietas(); track $index) {
+                <tr (click)="viewDiet(dieta)">
+                  <td>{{ dieta.title }}</td>
+                  <td>{{ dieta.creationDate | date:'dd/MM/yyyy HH:mm' }}</td>
+                  <td>{{ dieta.goal }}</td>
+                </tr>
+              }@empty {
+                <tr>
+                  <td colspan="3">Nenhuma dieta cadastrada, utilize o botão "Gerar nova dieta"</td>
+                </tr>
+              }
+              
+            </tbody>
+        </table>
+    </div>
+</section>
+  
+<div class="modal fade" #modalDieta tabindex="-1" role="dialog"
+aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="dieta">
+        <h1>{{ dietaSelecionada().title }}</h1>
+
+        @for(meal of dietaSelecionada().meals; track $index) {
+          <div>
+            <h3>{{ meal.refeicao }} ({{ meal.calorias }} kcal)</h3>
+            
+            <ul>
+              @for(alimento of meal.alimentos; track $index) {
+              <li>{{ alimento.alimento }} - {{ alimento.quantidade }} ({{alimento.calorias }} kcal)</li>
+              }
+            </ul>
+          </div>
+        }
+
+      </div>
+    </div>
   </div>
+</div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade" #modalGerarDieta id="modalGerarDieta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
           <div class="column" id="main">
             <h1 class="font-weight-bold">Gerar Cardápio</h1>
-            <form>
+            <form [formGroup]="dietForm" (submit)="onSubmit(); $event.preventDefault()">
               <div class="row">
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="idade">Idade <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="idade" placeholder="18">
+                    <input type="number" formControlName="idade" class="form-control" id="idade" placeholder="18">
                   </div>
                 </div>
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="sexo">Sexo <span class="text-danger">*</span></label>
-                    <select class="form-control" id="sexo">
+                    <select formControlName="sexo" class="form-control" id="sexo">
                       <option value="" disabled selected>Selecione</option>
                       <option value="masculino">Masculino</option>
                       <option value="feminino">Feminino</option>
@@ -76,7 +136,7 @@
                   <div class="form-group">
                     <label for="altura">Altura <span class="text-danger">*</span></label>
                     <div class="input-group">
-                      <input type="number" class="form-control" id="altura" placeholder="1,70">
+                      <input type="number" formControlName="altura" class="form-control" id="altura" placeholder="1,70">
                       <span class="unidade">m</span>
                     </div>
                   </div>
@@ -86,12 +146,12 @@
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="objetivo">Objetivo <span class="text-danger">*</span></label>
-                    <select class="form-control" id="objetivo">
+                    <select class="form-control" formControlName="objetivo" id="objetivo">
                       <option value="" disabled selected>Selecione</option>
-                      <option value="manter">Manter Peso</option>
-                      <option value="perder">Perder Peso</option>
-                      <option value="ganhar">Ganhar Massa Muscular</option>
-                      <option value="reeducar">Reeducação Alimentar</option>
+                      <option value="Manter Peso">Manter Peso</option>
+                      <option value="Perder Peso">Perder Peso</option>
+                      <option value="Ganhar Massa Muscular">Ganhar Massa Muscular</option>
+                      <option value="Reeducação Alimentar">Reeducação Alimentar</option>
                     </select>
                   </div>
                 </div>
@@ -99,7 +159,7 @@
                   <div class="form-group">
                     <label for="peso">Peso Atual <span class="text-danger">*</span></label>
                     <div class="input-group">
-                      <input type="number" class="form-control" id="peso" placeholder="75,40">
+                      <input type="number" formControlName="peso" class="form-control" id="peso" placeholder="75,40">
                       <span class="unidade">kg</span>
                     </div>
                   </div>
@@ -109,7 +169,7 @@
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="atividadeFisica">Nível de Atividade Física <span class="text-danger">*</span></label>
-                    <select class="form-control" id="atividadeFisica">
+                    <select class="form-control" formControlName="nivel_atividade" id="atividadeFisica">
                       <option value="" disabled selected>Selecione</option>
                       <option value="sedentario">Sedentário</option>
                       <option value="moderado">Moderado</option>
@@ -120,21 +180,28 @@
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="refeicoes">Refeições por dia <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="refeicoes" placeholder="3">
+                    <input type="number" formControlName="refeicoes_diarias" class="form-control" id="refeicoes"
+                      placeholder="3">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="condicaoSaude">Condição de Saúde Diagnosticada</label>
-                <input type="text" class="form-control" id="condicaoSaude"
+                <input type="text" formControlName="condicao_saude" class="form-control" id="condicaoSaude"
                   placeholder="Condição de Saúde Diagnosticada">
               </div>
               <div class="form-group">
                 <label for="intolerancia">Possui Intolerância</label>
-                <input type="text" class="form-control" id="intolerancia"
+                <input type="text" formControlName="alergia" class="form-control" id="intolerancia"
                   placeholder="Possui Intolerância">
               </div>
               <button type="submit" class="btn btn-primary">Confirmar</button>
+
+              @if(errorMessage()) {
+              <div class="errorMsg">
+                {{ errorMessage()}}
+              </div>
+              }
             </form>
           </div>
           <div>

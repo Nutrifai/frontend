@@ -18,7 +18,7 @@ export class CadastroComponent {
   router = inject(Router)
 
   userForm = this.formBuilder.group({
-    userId: ['', [Validators.required]],
+    userId: ['', [Validators.required, Validators.maxLength(16), Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(8)]]
   })

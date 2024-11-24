@@ -10,6 +10,7 @@ import { ListaDietasComponent } from './lista-dietas/lista-dietas.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { DatepickerTouchExampleComponent } from './datepicker-touch-example/datepicker-touch-example.component';
 import { PageLayoutComponent } from './shared/layouts/page-layout/page-layout.component';
+import { DialogAnimationsExample } from './select-nutri/dialog-animations-example-dialog/dialog-animations-example-dialog.component';
 
 export const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
@@ -20,13 +21,8 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'dietai', component: DietAiComponent },
     { path: 'assinatura', component: AssinaturaComponent },
+    { path: 'dialog', component: DialogAnimationsExample },
     { path: 'datepicker', component: DatepickerTouchExampleComponent },
-    {
-        path: '',
-        component: PageLayoutComponent,
-        children: [
-            { path: 'dietas', component: ListaDietasComponent }
-        ],
-    },
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' }, // Redireciona para 'home' por padrão
     { path: '**', redirectTo: 'inicio', pathMatch: 'full' }, // Redireciona para 'home' por padrão
 ];

@@ -1,6 +1,7 @@
 /* Estilo geral da fonte */
 * {
-    font-family: Open Sans, sans-serif; /* Adicionei fallback */
+    font-family: Open Sans, sans-serif;
+    /* Adicionei fallback */
 }
 
 /* Corpo da página */
@@ -63,28 +64,58 @@ header img {
     margin-top: 10vw;
 }
 
-/* Estilo da imagem de fundo */
 /* Estilo do elemento de fundo */
 .background {
-    width: 70vw; /* Exibe apenas 70% da largura da tela */
-    height: 100vh; /* Ocupa 100% da altura da tela */
+    width: 70vw;
+    /* Exibe apenas 70% da largura da tela */
+    height: 100vh;
+    /* Ocupa 100% da altura da tela */
     background-image: url('../../../public/Wallpaper_.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed; /* Usa position fixed para fixar o fundo no lugar */
+    position: absolute;
+    /* Posiciona o fundo de forma absoluta */
     top: 0;
-    left: 0; /* Posiciona a imagem à esquerda */
-    z-index: -1; /* Coloca a imagem abaixo de todo o conteúdo */
+    right: 0;
+    /* Alinha a imagem à direita */
+    z-index: 1;
+    /* Fundo fica abaixo do conteúdo */
 }
 
 /* Estilo do formulário */
+/* Estilo do formulário */
 form {
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    z-index: 9999;
+    width: 20%;
+    height: 21.5rem;;
+    position: absolute;
+    /* Posiciona o formulário sobre a imagem */
+    z-index: 9;
+    /* Garante que o formulário fique sobre a imagem */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo semitransparente para destacar o formulário */
+    border-radius: 10px;
+    top: 7rem;
+    bottom: 0;
+    left: 0;
+    right: 40rem;
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+    /* Adicione estas propriedades para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    /* Alinhe os itens em coluna */
+    justify-content: center;
+    /* Centralize verticalmente */
+    align-items: center;
+    /* Centralize horizontalmente */
+    text-align: center;
+    /* Alinhe o texto ao centro */
 }
+
 
 form label {
     font-size: 2vh;
@@ -99,10 +130,10 @@ form label {
     font-size: 2vh;
     min-width: 80%;
     min-height: 4vh;
-    border: 1px solid green;
+    border: 1px solid #387c4c;
     padding: 5px;
     border-radius: 10px;
-    background-color: darkgreen;
+    background-color: #387c4c;
     color: white;
     outline: none;
 }
@@ -150,3 +181,31 @@ form label {
 }
 
 /* Removida a redundância do seletor para 'nav ul li a' */
+
+.titulo_plano {
+    position: absolute;
+    top: 11rem;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 10;
+    left: 12rem;
+}
+
+.meses-plano {
+    font-size: 1.2rem;
+}
+
+.valor-mensal {
+    color: #387c4c;
+}
+
+.txt-mensal {
+    color: silver;
+    top: -0.5rem;
+    position: relative;
+}
+
+hr {
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+}

@@ -10,6 +10,7 @@ import { RecursosComponent } from '../recursos/recursos.component';
 import { SaudavelComponent } from '../saudavel/saudavel.component';
 import { ServicoComponent } from '../servico/servico.component';
 
+
 @Component({
   selector: 'app-inicio',
   standalone: true,

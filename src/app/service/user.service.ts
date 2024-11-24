@@ -8,18 +8,16 @@ import { tap } from 'rxjs/operators'
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrlRegister = 'https://0dpi6c64oh.execute-api.sa-east-1.amazonaws.com/api/register';
-  private apiUrlLogin = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/login';
   httpService = inject(HttpService);
   userIsLoggedIn = false
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.userIsLoggedIn = (window.localStorage.getItem("loggedIn") || "false") == "true"
   }
 
   register(userId: string, email: string, password: string): Observable<any> {
     const body = { userId, email, password };
-    return this.http.post(this.apiUrlRegister, body);
+    return this.httpService.post('register', body);
   }
 
   login(userForm: any): Observable<any> {  // Alterado para userId
@@ -32,4 +30,13 @@ export class UserService {
       )
     )
   }
+
+  logout() {
+    return this.httpService.post("logout", null)
+  }
+  
+  nutritionist(){
+    return this.httpService.get('nutritionist');
+  }
+
 }
