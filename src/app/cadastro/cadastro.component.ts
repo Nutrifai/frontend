@@ -32,7 +32,7 @@ export class CadastroComponent {
     }
     
     this.httpService.post("register", this.userForm.value).subscribe({
-      next: (_) => this.router.navigate(["/diet"]),
+      next: (_) => this.router.navigate(["/login"]),
       error: (e) => this.errorMessage.set(e.error["error_message"])
     })
   }

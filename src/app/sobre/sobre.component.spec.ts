@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DietAiComponent } from './diet-ai.component';
+import { SobreComponent } from './sobre.component';
 
-describe('DietAiComponent', () => {
-  let component: DietAiComponent;
-  let fixture: ComponentFixture<DietAiComponent>;
+describe('SobreComponent', () => {
+  let component: SobreComponent;
+  let fixture: ComponentFixture<SobreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DietAiComponent]
+      imports: [SobreComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DietAiComponent);
+    fixture = TestBed.createComponent(SobreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

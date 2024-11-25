@@ -1,51 +1,5 @@
 <app-header-geral></app-header-geral>
 <section class="container section">
-  <!-- <h1>Cardápio gerado por IA</h1>
-  <div id="infos" class="content">
-    <div class="conteudo_comida">
-      <h2>Café da manhã</h2>
-      <ul>
-        <li>Omelete (2 ovos) com espinafre, queijo e abacate (~350 kcal) ou</li>
-        <li>Iogurte grego (150g) com 1 colher de sopa de linhaça e framboesas (~300 kcal) ou</li>
-        <li>Smoothie de leite de amêndoas (200 ml), 5 morangos e 1 colher de chá de manteiga de amendoim (~250 kcal)
-        </li>
-      </ul>
-    </div>
-
-    <div class="conteudo_comida">
-      <h2>Almoço</h2>
-      <ul>
-        <li>Frango grelhado (120g) com salada de folhas verdes e azeite (~400 kcal) ou</li>
-        <li>Peixe grelhado (120g) com aspargos e espinafre refogado (~350 kcal) ou</li>
-        <li>Salada de atum (1 lata) com alface, tomate e abacate (~400 kcal)</li>
-      </ul>
-    </div>
-
-    <div class="conteudo_comida">
-      <h2>Jantar</h2>
-      <ul>
-        <li>Salmão grelhado (120g) com brócolis e azeite (~350 kcal) ou</li>
-        <li>Carne moída refogada (100g) com abobrinha e couve-flor (~400 kcal) ou</li>
-        <li>Frango desfiado (120g) com abóbora assada e cenoura (~350 kcal)</li>
-      </ul>
-    </div>
-
-    <div class="conteudo_comida">
-      <h2 class="details">Aproximadamente 1064 kcal por dia</h2>
-    </div>
-  </div>
-
-  <div class="btn-text-container">
-    <p class="warning-text">
-      A inteligência artificial pode cometer erros; por isso, é sempre aconselhável consultar um nutricionista.
-    </p>
-    <div class="btn-right-align">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Gerar Cardápio
-      </button>
-    </div>
-  </div> -->
-
   <section class="content-dietas">
     <h1>Dietas geradas por Inteligência Artificial</h1>
 
@@ -56,59 +10,58 @@
     </div>
 
     <div id="infos-dietas">
-        <table>
-            <thead>
-                <tr>
-                    <th>Descrição</th>
-                    <th>Data de criação</th>
-                    <th>Objetivo</th>
-                </tr>
-            </thead>
-            <tbody>
-              @for(dieta of dietas(); track $index) {
-                <tr (click)="viewDiet(dieta)">
-                  <td>{{ dieta.title }}</td>
-                  <td>{{ dieta.creationDate | date:'dd/MM/yyyy HH:mm' }}</td>
-                  <td>{{ dieta.goal }}</td>
-                </tr>
-              }@empty {
-                <tr>
-                  <td colspan="3">Nenhuma dieta cadastrada, utilize o botão "Gerar nova dieta"</td>
-                </tr>
-              }
-              
-            </tbody>
-        </table>
-    </div>
-</section>
-  
-<div class="modal fade" #modalDieta tabindex="-1" role="dialog"
-aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="dieta">
-        <h1>{{ dietaSelecionada().title }}</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Data de criação</th>
+            <th>Objetivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(dieta of dietas(); track $index) {
+          <tr (click)="viewDiet(dieta)">
+            <td>{{ dieta.title }}</td>
+            <td>{{ dieta.creationDate | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td>{{ dieta.goal }}</td>
+          </tr>
+          }@empty {
+          <tr>
+            <td colspan="3">Nenhuma dieta cadastrada, utilize o botão "Gerar nova dieta"</td>
+          </tr>
+          }
 
-        @for(meal of dietaSelecionada().meals; track $index) {
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="modal fade" #modalDieta tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="dieta">
+          <h1>{{ dietaSelecionada().title }}</h1>
+
+          @for(meal of dietaSelecionada().meals; track $index) {
           <div>
             <h3>{{ meal.refeicao }} ({{ meal.calorias }} kcal)</h3>
-            
+
             <ul>
               @for(alimento of meal.alimentos; track $index) {
               <li>{{ alimento.alimento }} - {{ alimento.quantidade }} ({{alimento.calorias }} kcal)</li>
               }
             </ul>
           </div>
-        }
+          }
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Modal -->
-  <div class="modal fade" #modalGerarDieta id="modalGerarDieta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" #modalGerarDieta id="modalGerarDieta" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
