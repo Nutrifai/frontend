@@ -1,31 +1,42 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders,  } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpService } from '../service/http/http.service';
+import { tap } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrlRegister = 'https://0dpi6c64oh.execute-api.sa-east-1.amazonaws.com/api/register';
+  httpService = inject(HttpService);
+  userIsLoggedIn = false
 
-  private apiUrlLogin = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/login';
-
-  private apiUrlAgendaNutricionista = 'https://imzdqi9zt7.execute-api.sa-east-1.amazonaws.com/api/nutritionists';
-
-  constructor(private http: HttpClient) {}
+  constructor() {
+    this.userIsLoggedIn = (window.localStorage.getItem("loggedIn") || "false") == "true"
+  }
 
   register(userId: string, email: string, password: string): Observable<any> {
     const body = { userId, email, password };
-    return this.http.post(this.apiUrlRegister, body);
+    return this.httpService.post('register', body);
   }
 
-  login(userId: string, password: string): Observable<any> {  // Alterado para userId
-    const body = { userId, password };  // Alterado para userId
-    return this.http.post(this.apiUrlLogin, body);
+  login(userForm: any): Observable<any> {  // Alterado para userId
+    return this.httpService.post("login", userForm)
+      .pipe(
+        tap(() => {
+          window.localStorage.setItem("loggedIn", "true")
+          this.userIsLoggedIn = true
+        }
+      )
+    )
   }
 
+  logout() {
+    return this.httpService.post("logout", null)
+  }
+  
   nutritionist(){
-    return this.http.get(this.apiUrlAgendaNutricionista);
+    return this.httpService.get('nutritionist');
   }
 
 }

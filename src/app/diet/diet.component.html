@@ -1,6 +1,6 @@
 <app-header-geral></app-header-geral>
 <section class="container section">
-  <h1>Cardápio gerado por IA</h1>
+  <!-- <h1>Cardápio gerado por IA</h1>
   <div id="infos" class="content">
     <div class="conteudo_comida">
       <h2>Café da manhã</h2>
@@ -44,10 +44,70 @@
         Gerar Cardápio
       </button>
     </div>
+  </div> -->
+
+  <section class="content-dietas">
+    <h1>Dietas geradas por Inteligência Artificial</h1>
+
+    <div class="btn-right-align">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGerarDieta">
+        Gerar nova dieta
+      </button>
+    </div>
+
+    <div id="infos-dietas">
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Data de criação</th>
+                    <th>Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+              @for(dieta of dietas(); track $index) {
+                <tr (click)="viewDiet(dieta)">
+                  <td>{{ dieta.title }}</td>
+                  <td>{{ dieta.creationDate | date:'dd/MM/yyyy HH:mm' }}</td>
+                  <td>{{ dieta.goal }}</td>
+                </tr>
+              }@empty {
+                <tr>
+                  <td colspan="3">Nenhuma dieta cadastrada, utilize o botão "Gerar nova dieta"</td>
+                </tr>
+              }
+              
+            </tbody>
+        </table>
+    </div>
+</section>
+  
+<div class="modal fade" #modalDieta tabindex="-1" role="dialog"
+aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="dieta">
+        <h1>{{ dietaSelecionada().title }}</h1>
+
+        @for(meal of dietaSelecionada().meals; track $index) {
+          <div>
+            <h3>{{ meal.refeicao }} ({{ meal.calorias }} kcal)</h3>
+            
+            <ul>
+              @for(alimento of meal.alimentos; track $index) {
+              <li>{{ alimento.alimento }} - {{ alimento.quantidade }} ({{alimento.calorias }} kcal)</li>
+              }
+            </ul>
+          </div>
+        }
+
+      </div>
+    </div>
   </div>
+</div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade" #modalGerarDieta id="modalGerarDieta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -88,10 +148,10 @@
                     <label for="objetivo">Objetivo <span class="text-danger">*</span></label>
                     <select class="form-control" formControlName="objetivo" id="objetivo">
                       <option value="" disabled selected>Selecione</option>
-                      <option value="manter">Manter Peso</option>
-                      <option value="perder">Perder Peso</option>
-                      <option value="ganhar">Ganhar Massa Muscular</option>
-                      <option value="reeducar">Reeducação Alimentar</option>
+                      <option value="Manter Peso">Manter Peso</option>
+                      <option value="Perder Peso">Perder Peso</option>
+                      <option value="Ganhar Massa Muscular">Ganhar Massa Muscular</option>
+                      <option value="Reeducação Alimentar">Reeducação Alimentar</option>
                     </select>
                   </div>
                 </div>

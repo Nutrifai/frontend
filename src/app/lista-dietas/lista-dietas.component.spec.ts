@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule, ActivatedRoute } from '@angular/router';
-import { HeaderGeralComponent } from './header-geral.component';
+import { ListaDietasComponent } from './lista-dietas.component'
 
-describe('HeaderGeralComponent', () => {
-  let component: HeaderGeralComponent;
-  let fixture: ComponentFixture<HeaderGeralComponent>;
+describe('ListaDietasComponent', () => {
+  let component: ListaDietasComponent;
+  let fixture: ComponentFixture<ListaDietasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderGeralComponent, RouterModule],  // Incluindo o RouterModule para ativar o roteamento
+      imports: [RouterModule],  // Incluindo o RouterModule para ativar o roteamento
       providers: [
         { provide: ActivatedRoute, useValue: { snapshot: { params: {} } } }  // Mock do ActivatedRoute
       ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeaderGeralComponent);
+    fixture = TestBed.createComponent(ListaDietasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

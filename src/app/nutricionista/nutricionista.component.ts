@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nutricionista.component.css'
 })
 export class NutricionistaComponent {
-
+  // httpService = inject
 }
